@@ -10,7 +10,7 @@ dockerpath=shine102/ml-microservice-kubernetes
 # Run the Docker Hub container with kubernetes
 kubectl run ml-microservice-kubernetes\
     --image=$dockerpath\
-    --port=8080 --labels app=ml-microservice-kubernetes
+    --port=80 --labels app=ml-microservice-kubernetes
 
 # Step 3:
 # List kubernetes pods
@@ -18,4 +18,4 @@ kubectl get pods
 
 # Step 4:
 # Forward the container port to a host
-kubectl port-forward ml-microservice-kubernetes 8080:80
+kubectl port-forward ml-microservice-kubernetes 8000:80
