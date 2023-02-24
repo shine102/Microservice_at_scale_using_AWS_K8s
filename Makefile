@@ -15,6 +15,16 @@ install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
 
+install-hadolint:
+	wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.17.5/hadolint-Linux-x86_64
+	chmod +x /bin/hadolint
+
+install-minikube:
+	wget -O /bin/minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+	chmod +x /bin/minikube
+
+install-all: install-hadolint install-minikube install
+
 test:
 	# Additional, optional, tests could go here
 	#python -m pytest -vv --cov=myrepolib tests/*.py
@@ -28,4 +38,4 @@ lint:
 	# This should be run from inside a virtualenv
 	pylint --disable=R,C,W1203,W1202 app.py
 
-all: install lint test
+all: install-all lint test
