@@ -5,11 +5,15 @@
 
 # Step 1:
 # Create dockerpath
-# dockerpath=<your docker ID/path>
+dockerpath=shine102/ml-microservice-kubernetes
+
 
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
+docker login --username=shine102
+docker tag ml-microservice-kubernetes $dockerpath
 
 # Step 3:
 # Push image to a docker repository
+docker push $dockerpath
