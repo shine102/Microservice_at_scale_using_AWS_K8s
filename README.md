@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+[![shine102](https://circleci.com/gh/shine102/Microservice_at_scale_using_AWS_K8s.svg?style=svg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 ## Project Overview
 
@@ -45,6 +45,6 @@ source .devops/bin/activate
 ### Kubernetes Steps
 
 * Setup and Configure Docker locally
+  `./run_docker.sh`
 * Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
+  `./run_kubernetes.sh`
